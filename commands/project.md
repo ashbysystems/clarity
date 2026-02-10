@@ -1,5 +1,5 @@
 ---
-description: Review an entire project and produce a plain-language summary of what it is, how it works, what it depends on, and where the risks are. Use when you want to understand a project you built with Claude Code, or before handing it to someone else.
+description: Summarise a project in plain language. Can get large — use on small/medium projects or specify a focus area.
 argument-hint: [optional: project path or focus area]
 ---
 
@@ -102,11 +102,14 @@ The review must cover these sections in order:
 4. Create the directory if it does not exist
 5. Confirm the file location to the user
 
-### Step 8: Offer follow-up
+### Step 8: End marker
 
-After the review, ask:
+End every project review with:
 
-> Anything you want me to dig deeper into, or are we good?
+---
+*End of Clarity review. Ask a follow-up or continue your session.*
+
+Do NOT end with "Anything you want me to dig deeper into?" or similar — the end marker already tells the user they can ask follow-ups.
 
 ## Coverage statement
 

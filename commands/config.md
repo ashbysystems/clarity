@@ -1,5 +1,5 @@
 ---
-description: Configure where Clarity saves review files. Set a save location so reviews are stored in a consistent place.
+description: Set where Clarity saves review files.
 argument-hint: [save-path]
 ---
 

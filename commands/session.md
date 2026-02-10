@@ -1,5 +1,5 @@
 ---
-description: Review what Claude Code built, changed, or planned in this session. Produces a plain-language summary covering decisions, changes, dependencies, risks, and next steps. Run at the end of a session or when you want to understand what just happened.
+description: Summarise this session in plain language. No args needed, or specify a focus area.
 argument-hint: [optional: focus area]
 ---
 
@@ -93,13 +93,14 @@ The review must cover these sections in order:
 4. Create the directory if it does not exist
 5. Confirm the file location to the user
 
-### Step 6: Offer follow-up
+### Step 6: End marker
 
-After the review, ask:
+End every session review with:
 
-> Anything you want me to dig deeper into, or are we good?
+---
+*End of Clarity review. Ask a follow-up or continue your session.*
 
-If the user asks for more detail on a specific section, provide it following the same methodology and language rules.
+Do NOT end with "Anything you want me to dig deeper into?" or similar — the end marker already tells the user they can ask follow-ups.
 
 ## Language rules
 
