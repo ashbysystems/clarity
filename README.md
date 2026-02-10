@@ -28,12 +28,14 @@ Clarity does not judge code quality, suggest fixes, or tell you what to do. It t
 
 ### Claude Code (Terminal)
 
-Clone the repository and install from the local directory:
+1. Download this repository (Code > Download ZIP) and unzip it
+2. In your terminal, run:
 
 ```bash
-git clone https://github.com/ashbysystems/clarity.git
-claude plugin install ./clarity
+claude plugin install ./path/to/Clarity
 ```
+
+Replace `./path/to/Clarity` with the actual path to the unzipped folder.
 
 ## Quick Start
 
