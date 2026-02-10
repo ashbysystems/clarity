@@ -73,7 +73,7 @@ Reviews are saved as markdown files to your configured location (set via `/clari
 
 ## Companion Plugin: Attest
 
-If you need structured review of AI *outputs* (contracts, policies, analyses), see [Attest by Ashby](https://github.com/ashbysystems/attest). Clarity reviews what AI *built*. Attest reviews what AI *wrote*.
+Clarity explains what AI built. [Attest by Ashby](https://github.com/ashbysystems/attest) is the other half: a structured review workflow that surfaces questions about any AI-generated output, captures your decisions, and produces an auditable decision log. Different jobs. Same goal: keeping humans in control.
 
 ## Data Handling
 
