@@ -1,0 +1,40 @@
+---
+description: Configure where Clarity saves review files. Set a save location so reviews are stored in a consistent place.
+argument-hint: [save-path]
+---
+
+# /clarity:config
+
+Manage Clarity plugin configuration.
+
+## Behaviour
+
+### If an argument is provided
+
+The argument is a file path. Set it as the save location for all Clarity review files.
+
+1. Validate the path exists and is a directory. If it does not exist, ask the user if they want to create it.
+2. Save the configuration to `${CLARITY_PLUGIN_ROOT}/.config.json` as:
+   ```json
+   {
+     "saveLocation": "[absolute path]"
+   }
+   ```
+3. Confirm:
+   > Save location set to: [path]
+   > Clarity reviews will be saved here.
+
+### If no argument is provided
+
+Display the current configuration:
+
+1. Read `${CLARITY_PLUGIN_ROOT}/.config.json` if it exists
+2. Display:
+   > **Clarity Configuration**
+   > - Save location: [configured path, or "Not configured (using clarity/ in current working directory)"]
+   >
+   > To change the save location, run `/clarity:config [path]`
+
+### Configuration file
+
+Store configuration in `${CLARITY_PLUGIN_ROOT}/.config.json`. If this file does not exist, all commands default to creating a `clarity/` directory in the current working directory.
