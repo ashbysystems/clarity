@@ -16,11 +16,16 @@
 |------|-------------|-------------|-----|
 | [file path] | [One sentence] | [What is different] | [Reason] |
 
-[If files were deleted, note them separately with a brief explanation of why.]
+[If files were deleted, list them separately:]
+
+### Deleted files
+- [file path]: [one sentence explaining why it was removed]
 
 ## Why Those Choices
 
-[For every significant decision:]
+[If no significant decisions were made, state: "No major architectural or approach decisions were made in this session."]
+
+[Otherwise, for every significant decision:]
 
 **Choice:** [what was chosen]
 **Why:** [reasoning]

@@ -8,13 +8,13 @@ user-invocable: false
 
 ## Purpose
 
-Clarity reviews must be thorough but honest about their limits. A review that claims to cover everything but silently skips files is worse than one that explicitly states what was and was not examined. This skill defines how to manage scope in both session and project reviews.
+Clarity reviews must be thorough. If you cannot review everything, say exactly what you reviewed and what you skipped. A review that claims to cover everything but silently skips files is worse than one that explicitly states what was and was not examined. This skill defines how to manage scope in both session and project reviews.
 
 ## Session Review Scope
 
 ### Primary sources (in order of reliability)
 
-1. **Git changes** — If the project uses git, run `git diff` and `git log` to identify files created, modified, or deleted during the session. This is the most reliable source of what actually changed.
+1. **Git changes** — Check if git is available by running `git rev-parse --git-dir 2>/dev/null`. If this succeeds, run `git diff` and `git log` to identify files created, modified, or deleted during the session. This is the most reliable source of what actually changed. If git is not available, proceed with conversation history and file system inspection.
 
 2. **Conversation history** — Read the available conversation context for decisions, reasoning, and discussion that led to the changes.
 
@@ -68,6 +68,8 @@ Based on the structure scan, read source files in this priority order:
 
 ### Large project handling
 
+Source files are files containing application logic (e.g., .js, .ts, .py, .rb, .go, .java, .md for plugin projects), excluding config files, stylesheets, lock files, tests (unless reviewing tests specifically), and assets.
+
 If a project has more than 100 source files (excluding node_modules, vendor directories, build output, and similar):
 
 1. Complete Pass 1 (structure scan) fully
@@ -87,7 +89,7 @@ Every project review must state:
 - How many were scanned at summary level
 - Which areas were not reviewed and why
 
-This appears in the review header under "Scope notes."
+This appears in the review frontmatter as "Files reviewed / Files scanned / Not reviewed" (as shown in the project review template).
 
 ## What Not to Scan
 

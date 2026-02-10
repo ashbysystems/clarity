@@ -8,7 +8,7 @@ Display the Clarity command reference.
 
 ## Behaviour
 
-Display the following content exactly:
+Display the following content (render as markdown):
 
 ---
 

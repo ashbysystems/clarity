@@ -27,7 +27,7 @@ Examples:
 When describing how a project is built, use physical metaphors:
 
 - Think of the architecture as a building's floor plan, not its wiring diagrams
-- Describe the main rooms (components) and how people (data) move between them
+- Describe the main rooms (components) and how data moves between them
 - Focus on what each part does, not how it does it internally
 
 Example:
@@ -123,6 +123,11 @@ For each file:
 - **Why**: The reason for the change
 
 Do not list every line that changed. Summarise the meaningful changes and their purpose.
+
+For deleted files, list them separately below the table:
+
+### Deleted files
+- [file path]: [one sentence explaining why it was removed]
 
 ## Test Coverage Explanations
 

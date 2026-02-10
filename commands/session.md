@@ -17,7 +17,7 @@ Follow every step in order. Refer to the review-methodology skill as the governi
 
 ### Step 1: First-run check
 
-Check whether `${CLARITY_PLUGIN_ROOT}/.config.json` exists and contains a save location.
+Check whether `${CLAUDE_PLUGIN_ROOT}/.config.json` exists and contains a save location.
 
 If no configuration exists, prompt:
 
@@ -63,7 +63,7 @@ If the user provided an argument (e.g., `/clarity:session authentication`), focu
 
 ### Step 4: Produce the review
 
-Using the templates at `${CLARITY_PLUGIN_ROOT}/templates/session-review.md`, produce a review covering all sections. Apply the review-methodology skill for language and tone. Apply the explanation-frameworks skill for all technical explanations.
+Using the templates at `${CLAUDE_PLUGIN_ROOT}/templates/session-review.md`, produce a review covering all sections. Apply the review-methodology skill for language and tone. Apply the explanation-frameworks skill for all technical explanations.
 
 The review must cover these sections in order:
 
@@ -88,9 +88,9 @@ The review must cover these sections in order:
 ### Step 5: Save and display
 
 1. **Display the full review in the terminal** so the user can read it immediately
-2. **Save a markdown file** using the filename format: `clarity-session-YYYY-MM-DD-HHMM.md`
+2. **Save a markdown file** using the filename format: `clarity-session-YYYY-MM-DD-HHMMSS.md`
 3. Save to the configured location (from Step 1) or the `clarity/` directory in the current working directory
-4. Create the directory if it does not exist
+4. Create the directory if it does not exist. If directory creation fails (permissions, invalid path), save the review to the current working directory instead and inform the user: "Could not create [path]. Review saved to [fallback path] instead. Check your save location with `/clarity:config`."
 5. Confirm the file location to the user
 
 ### Step 6: End marker

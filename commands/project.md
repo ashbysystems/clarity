@@ -17,7 +17,7 @@ Follow every step in order. Refer to the review-methodology skill as the governi
 
 ### Step 1: First-run check
 
-Same as `/clarity:session` Step 1. Check for `${CLARITY_PLUGIN_ROOT}/.config.json` and prompt for save location if not configured.
+Same as `/clarity:session` Step 1. Check for `${CLAUDE_PLUGIN_ROOT}/.config.json` and prompt for save location if not configured.
 
 ### Step 2: Disclaimer
 
@@ -48,7 +48,7 @@ If the project has more than 100 source files (per the scope-management skill):
 > - **Full sweep** — I review everything, focusing most detail on high-priority files
 > - **Focused review** — Tell me which area to focus on (e.g., "the authentication system", "the API endpoints", "recent changes")
 
-Wait for the user's response before proceeding.
+Wait for the user's response before proceeding. If the response is ambiguous, offer examples: "Full sweep" or "Focused review on [area]".
 
 If the user provided a focus area as an argument (e.g., `/clarity:project authentication`), treat this as a focused review without asking.
 
@@ -63,6 +63,7 @@ Read source files in the priority order defined by the scope-management skill:
 5. Data handling
 6. Recently modified files
 7. Tests
+8. Other files (utilities, helpers, shared components) — summary level unless they appear in multiple categories above
 
 Adjust depth based on the user's choice in Step 4:
 - **Full sweep:** High-priority files get detailed review; lower-priority files get one-sentence summaries
@@ -70,7 +71,7 @@ Adjust depth based on the user's choice in Step 4:
 
 ### Step 6: Produce the review
 
-Using the template at `${CLARITY_PLUGIN_ROOT}/templates/project-review.md`, produce a review covering all sections. Apply the review-methodology skill for language and tone. Apply the explanation-frameworks skill for all technical explanations.
+Using the template at `${CLAUDE_PLUGIN_ROOT}/templates/project-review.md`, produce a review covering all sections. Apply the review-methodology skill for language and tone. Apply the explanation-frameworks skill for all technical explanations.
 
 The review must cover these sections in order:
 
@@ -99,7 +100,7 @@ The review must cover these sections in order:
 1. **Display the full review in the terminal** so the user can read it immediately
 2. **Save a markdown file** using the filename format: `clarity-project-YYYY-MM-DD.md`
 3. Save to the configured location or `clarity/` in the current working directory
-4. Create the directory if it does not exist
+4. Create the directory if it does not exist. If directory creation fails (permissions, invalid path), save the review to the current working directory instead and inform the user: "Could not create [path]. Review saved to [fallback path] instead. Check your save location with `/clarity:config`."
 5. Confirm the file location to the user
 
 ### Step 8: End marker
@@ -113,11 +114,11 @@ Do NOT end with "Anything you want me to dig deeper into?" or similar — the en
 
 ## Coverage statement
 
-Every project review must include a coverage statement in the header:
+Every project review must include a coverage statement in the frontmatter (as shown in the template), immediately after the date:
 
 > **Files reviewed:** [n] of [total] source files in detail
 > **Files scanned:** [n] at summary level
-> **Not reviewed:** [areas skipped and why, if any]
+> **Not reviewed:** [areas skipped and why. If all relevant areas were reviewed, write "None".]
 
 ## Language rules
 

@@ -13,8 +13,8 @@ Manage Clarity plugin configuration.
 
 The argument is a file path. Set it as the save location for all Clarity review files.
 
-1. Validate the path exists and is a directory. If it does not exist, ask the user if they want to create it.
-2. Save the configuration to `${CLARITY_PLUGIN_ROOT}/.config.json` as:
+1. Validate the path exists and is a directory. If it does not exist, ask the user if they want to create it. If they decline, or if directory creation fails, display an error and do not save the configuration. Suggest running `/clarity:config` again with a valid path.
+2. Save the configuration to `${CLAUDE_PLUGIN_ROOT}/.config.json` as:
    ```json
    {
      "saveLocation": "[absolute path]"
@@ -28,7 +28,7 @@ The argument is a file path. Set it as the save location for all Clarity review 
 
 Display the current configuration:
 
-1. Read `${CLARITY_PLUGIN_ROOT}/.config.json` if it exists
+1. Read `${CLAUDE_PLUGIN_ROOT}/.config.json` if it exists
 2. Display:
    > **Clarity Configuration**
    > - Save location: [configured path, or "Not configured (using clarity/ in current working directory)"]
@@ -37,4 +37,4 @@ Display the current configuration:
 
 ### Configuration file
 
-Store configuration in `${CLARITY_PLUGIN_ROOT}/.config.json`. If this file does not exist, all commands default to creating a `clarity/` directory in the current working directory.
+Store configuration in `${CLAUDE_PLUGIN_ROOT}/.config.json`. If this file does not exist, all commands default to creating a `clarity/` directory in the current working directory.

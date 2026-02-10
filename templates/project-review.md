@@ -6,7 +6,7 @@
 - **Project:** [Project name or path]
 - **Files reviewed:** [n] of [total] source files in detail
 - **Files scanned:** [n] at summary level
-- **Not reviewed:** [areas skipped and why, if any]
+- **Not reviewed:** [areas skipped and why, or "None" if all relevant areas were reviewed]
 
 ## What This Project Is
 
@@ -22,7 +22,7 @@
 [The main technology the project is built with]
 
 ### Libraries and utilities
-| Dependency | What it does | Maintained? | If it breaks |
+| Dependency | What it does | Maintenance status | If it breaks |
 |-----------|-------------|------------|-------------|
 | [name] | [one sentence] | [Yes, actively / Single maintainer / Uncertain] | [consequence] |
 

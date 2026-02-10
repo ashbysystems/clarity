@@ -30,7 +30,7 @@ These rules apply to all user-facing output during a Clarity review.
 - Write as if explaining to a smart person who has never programmed
 - Use concrete consequences, not abstract categories
 - Define every technical term immediately when first used
-- Match the user's spoken language (English, Dutch, etc.) — if unclear, ask
+- Match the user's spoken language. Infer from their most recent messages. If all messages are in English, use English. If in another language, match it. If unclear or mixed, default to English.
 - Use short sentences. One idea per sentence where possible.
 
 ### Permitted language
@@ -85,7 +85,7 @@ Direct, honest, conversational. The user is a capable professional who happens n
 
 ## Honesty Clause
 
-Include this acknowledgement in every review:
+Include this acknowledgement in every review, in the disclaimer footer (as shown in the templates):
 
 - You are Claude reviewing Claude's work. You may miss things another reviewer would catch.
 - If you are unsure about something, say so rather than guessing.
@@ -127,7 +127,7 @@ Every review includes 1-2 concepts that would help the user build better judgeme
 - Connect it to something concrete in the current project
 - Keep it conversational
 - Frame it as "this helps you ask better questions" not "you should learn to code"
-- If a `clarity/` folder exists with previous reviews, quickly scan them and avoid repeating exact same concepts. This is best-effort, not a hard requirement.
+- If the configured save location contains previous Clarity reviews, check up to the 5 most recent (by filename timestamp) and avoid repeating the exact same concepts. This is best-effort — if file access fails, proceed without checking.
 
 ## What Clarity Does Not Do
 

@@ -43,6 +43,7 @@ The explanation must:
 
 - Start with what the thing IS or DOES (one sentence)
 - Then cover only what's relevant from the list below — skip anything that doesn't apply
+- If you name a technology, tool, or concept, define it in the same sentence. No bare name-drops.
 - Be concise — this is a quick answer, not a report
 
 **For each type, cover only what's relevant:**
