@@ -28,14 +28,11 @@ Clarity does not judge code quality, suggest fixes, or tell you what to do. It t
 
 ### Claude Code (Terminal)
 
-```bash
-claude plugin install ashbysystems/clarity
-```
-
-Or install from a local directory:
+Clone the repository and install from the local directory:
 
 ```bash
-claude plugin install ./path/to/Clarity
+git clone https://github.com/ashbysystems/clarity.git
+claude plugin install ./clarity
 ```
 
 ## Quick Start
