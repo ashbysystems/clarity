@@ -19,17 +19,8 @@ Clarity does not judge code quality, suggest fixes, or tell you what to do. It t
 
 ## Installation
 
-### Claude Cowork (Desktop)
-
-1. Download this repository (Code > Download ZIP, or clone it)
-2. In Claude Cowork, go to Settings > Plugins > Upload Plugin
-3. Select the `Clarity` folder
-4. Clarity commands will appear in your command menu
-
-### Claude Code (Terminal)
-
 1. Download this repository (Code > Download ZIP) and unzip it
-2. In your terminal, run:
+2. In Claude Code, run:
 
 ```bash
 claude plugin install ./path/to/Clarity
